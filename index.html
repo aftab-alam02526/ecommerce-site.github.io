@@ -1025,7 +1025,7 @@ document.getElementById('clear-cart')?.addEventListener('click', () => {
   saveCart();
 });
 
-// The product detail page has its own Add to Cart button.
+// The product detail page
 const detailAddButton = document.querySelector('#product .single-pro-details button.normal');
 if (detailAddButton) {
   detailAddButton.addEventListener('click', () => {
@@ -1039,7 +1039,7 @@ if (detailAddButton) {
   });
 }
 
-// Product cards open the product detail view, but the cart icon is handled above.
+// Product cards
 document.querySelectorAll('#product .pro, #shop .pro, #product1 .pro').forEach(card => {
   card.addEventListener('click', event => {
     if (event.target.closest('.cart')) return;
