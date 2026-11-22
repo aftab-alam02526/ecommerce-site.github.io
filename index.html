@@ -995,14 +995,20 @@ function renderCart() {
 }
 
 document.addEventListener('click', event => {
-  const cartLink = event.target.closest('#product1 .cart, #shop .cart, #product .cart');
-  if (cartLink) {
+  const cartLink = event.target.closest('.pro .cart');
+
+if (cartLink) {
     event.preventDefault();
     event.stopPropagation();
+
     const card = cartLink.closest('.pro');
-    if (card) addToCart(productFromCard(card));
+
+    if (card) {
+        addToCart(productFromCard(card));
+    }
+
     return;
-  }
+}
 
   const removeButton = event.target.closest('[data-remove]');
   if (removeButton) {
